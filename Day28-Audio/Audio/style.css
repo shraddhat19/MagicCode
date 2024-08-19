@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(17, 17, 17);
+    gap: 5px;
+}
+.sidebar{
+    padding: 40px 20px;
+    background: black;
+    height: 100vh;
+    width: 200px;
+}
+.sidebar .header{
+    font-size: 30px;
+    color: white;
+}
+.sidebar .header i{
+    margin-right: 15px;
+    border:rgba(255, 255, 255, 0.799) 2px solid;
+    color: rgb(9, 172, 9);
+    border-radius: 50%;
+}
+.sidebar .list {
+    margin-top: 30px ;
+}
+.sidebar .list i{
+    margin-right: 15px;
+    color: white;
+}
+.sidebar .list li{
+     padding: 10px 0;
+}
+.sidebar .list li a{
+    color: white;
+    font-size: 20px;
+}
+.sidebar .library{
+    margin:20px 0;
+}
+.sidebar .lang{
+    margin:40px 0;
+}
+.sidebar .lang a{
+    padding:10px 20px;
+    border: 1px grey solid;
+    border-radius: 30px;
+}
+.content{
+    background: black;
+    width: calc(100% - 205px);
+}
+.account{
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.account button{
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+.account .login{
+    border: none;
+    background: white;
+}
+.account .login a{
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+}
+.account .signup{
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 15px;
+}
+.account .signup a{
+    color: rgba(174, 172, 172, 0.973);
+}
+.account .signup a:hover{
+    color: white;
+}
+.artists,.albums{
+    color: white;
+    padding: 10px ;
+    background-color: rgb(14, 14, 14);
+
+}
+.artists,.albums .header{
+    font-size:25px;
+    font-weight: 600;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pop-artists,.pop-albums{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.artist,.album{
+    padding: 10px;
+}
+.artist:hover,.album:hover{
+    background-color: rgb(37, 37, 37);
+}
+.artist .image,.album .image{
+    height: 30vh;
+    width: 180px;
+    position: relative;
+}
+.artist .image i,.album .image i{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgb(6, 202, 6);
+    color: black;
+    padding: 16px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: none;
+}
+.artist:hover i,.album:hover i{
+    display: block;
+    transition: 0.4s;
+ }
+.artist .image img,.album .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.album .image img{
+    border-radius: 10%;
+}
+.artist h3,.album h3{
+    font-size: 17px;
+    padding: 5px 0;
+}
+.artist p,.album p{
+    font-size: 15px;
+    color: rgb(207, 205, 205);
+    width: 190px;
+}
+.artist .audio1,.album .audio1{
+    display: none;
+    width: 200px;
+}
+.artist:hover .audio1,.album:hover .audio1{
+    display: block;
+}

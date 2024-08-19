@@ -1,0 +1,102 @@
+@media screen and (max-width:1024px){
+    .pop-artists,.pop-albums{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:768px){
+    .content{
+        width: calc(100% - 155px);
+    }
+    .sidebar{
+        width: 150px;
+    }.sidebar .header{
+        font-size: 20px;
+    }
+    .sidebar .list li a{
+        font-size: 15px;
+    }
+    .sidebar .lang a{
+        padding:10px ;
+    }
+    .account button{
+        width: 70px;
+        padding: 5px;
+        margin: 0 10px;
+    }
+    .account .login a{
+        font-size: 10px;
+    }
+    .account .signup{
+        font-size: 10px;
+    }
+    .artists,.albums .header{
+        font-size:18px;
+    }
+    .artist .image,.album .image{
+        height: 20vh;
+        width: 80px;
+    }
+    .artist .image i,.album .image i{
+        font-size: 10px;
+    }
+    .artist .audio1,.album .audio1{
+        width: 100px;
+    }
+    .artist p,.album p{
+        font-size: 12px;
+        width: 90px;
+    }
+}
+@media screen and (max-width:480px){
+    .content{
+        width: calc(100% - 105px);
+    }
+    .sidebar{
+        width: 100px;
+        padding: 40px 10px;
+    }
+    .sidebar .header i{
+        margin-right: 5px;
+    }
+    .sidebar .list i{
+        margin-right: 5px;
+    }
+    .sidebar .header{
+        font-size: 18px;
+    }
+    .sidebar .list li a{
+        font-size: 12px;
+    }
+    .sidebar .lang a{
+        padding:5px ;
+    }
+    .account button{
+        width: 50px;
+        padding: 5px;
+        margin: 0 10px;
+    }
+    .account .login a{
+        font-size: 10px;
+    }
+    .account .signup{
+        font-size: 10px;
+    }
+    .artists,.albums .header{
+        font-size:18px;
+    }
+    .artist .image,.album .image{
+        height: 20vh;
+        width: 80px;
+    }
+    .artist .image i,.album .image i{
+        font-size: 10px;
+    }
+    .artist .audio1,.album .audio1{
+        width: 100px;
+    }
+    .artist p,.album p{
+        font-size: 12px;
+        width: 90px;
+    }
+}
