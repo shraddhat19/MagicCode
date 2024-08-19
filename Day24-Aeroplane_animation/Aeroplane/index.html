@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane Movement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="plane" id="plane"><img src="image/plane.png"></i></div>
+        <div class="city" style="top:52%; left:10%;">Mumbai</div>
+        <div class="city" style="top:30%; left:40%;">Delhi</div>
+        <div class="city" style="top:52%; left:80%;">Kolkata</div>
+    </div>
+    <!-- <i class="fa-solid fa-plane"></i> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const plane = document.getElementById('plane');
+            const container = document.querySelector('.container');
+
+            function createFog() {
+                const fog = document.createElement('div');
+                fog.className = 'fog';
+                fog.style.top = plane.offsetTop + 'px';
+                fog.style.left = plane.offsetLeft + 'px';
+                container.appendChild(fog);
+
+                setTimeout(() => {
+                    fog.remove();
+                }, 3000);
+            }
+
+            setInterval(createFog, 200);
+        });
+
+    </script>
+</body>
+
+</html>

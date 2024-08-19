@@ -1,0 +1,79 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #87CEEB;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}   
+
+.plane {
+    position: absolute;
+    transform-origin: center center;
+    animation: movePlane 15s linear infinite;
+}
+
+.city {
+    position: absolute;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes movePlane {
+    0% {
+        top: 40%;
+        left: 10%;
+        transform: rotate(0deg);
+    }
+
+    33% {
+        top: 20%;
+        left: 30%;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        top: 30%;
+        left: 70%;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        top: 40%;
+        left: 100%;
+        transform: rotate(0deg);
+    }
+}
+
+.fog {
+    position: absolute;
+    margin-top: 39px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fogFade 3s linear infinite;
+}
+
+@keyframes fogFade {
+    0% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
