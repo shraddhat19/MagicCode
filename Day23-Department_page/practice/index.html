@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Navigation</title>
+    <style>
+        /* Sidebar styling */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: #f4f4f4;
+            padding: 15px;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin-bottom: 5px;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background: #ddd;
+        }
+
+        /* Main content styling */
+        .main-content {
+            margin-left: 220px;
+            padding: 15px;
+        }
+
+        /* Hidden content sections */
+        .content-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" data-content="content1">Topic 1</a>
+        <a href="#" data-content="content2">Topic 2</a>
+        <a href="#" data-content="content3">Topic 3</a>
+    </div>
+
+    <div class="main-content">
+        <div id="content1" class="content-section">
+            <h2>Topic 1</h2>
+            <p>This is the description for Topic 1.</p>
+        </div>
+        <div id="content2" class="content-section">
+            <h2>Topic 2</h2>
+            <p>This is the description for Topic 2.</p>
+        </div>
+        <div id="content3" class="content-section">
+            <h2>Topic 3</h2>
+            <p>This is the description for Topic 3.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Hide all content sections
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Show the clicked content section
+                const contentId = this.getAttribute('data-content');
+                document.getElementById(contentId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>

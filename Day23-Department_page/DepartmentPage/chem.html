@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background: rgba(243, 241, 241, 0.927);
+            gap: 10px;
+        }
+
+        .container1 {
+            width: 80%;
+            background: white;
+            padding: 30px 30px 50px 5px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #f22e07;
+            align-items: flex-start;
+        }
+
+        .container1 hr {
+            background: #f78771;
+            border: none;
+            height: 1px;
+        }
+
+        .container1 .content {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .container1 .sidebar {
+            width: 25%;
+        }
+
+        .container1 .information {
+            width: 80%;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: #516171;
+        }
+
+        .container1 .sidebar ul a {
+            line-height: 35px;
+            font-size: 13px;
+            color: black;
+            padding-left: 15px;
+            box-sizing: border-box;
+            font-weight: 700;
+        }
+
+        .sidebar hr {
+            background: none;
+            height: 1px;
+            border-bottom: 1.5px dashed #bd290b;
+        }
+
+        .content-section {
+            display: none;
+            padding: 0 20px;
+        }
+
+        .content-section:first-child {
+            display: block;
+        }
+
+        .main-container .container2 {
+            width: 15%;
+            margin-top: 10px;
+            position: sticky;
+            padding-bottom: 20px;
+        }
+
+        .container2 h1 {
+            padding: 7px 18px;
+            background: rgb(171, 70, 70);
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .container2 ul {
+            background: white;
+        }
+
+        .container2 ul li {
+            padding: 5px;
+            border-radius: 10px;
+            border-bottom: rgb(244, 243, 243) 0.5px solid;
+        }
+
+        .container2 ul a {
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .container2 i {
+            margin-right: 15px;
+            color: #fc5a39;
+            font-size: 15px;
+        }
+
+        .page-title {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            background: #3a3a3dc2 url(/website/img/bg_sub-header.webp) repeat 0 0;
+            padding: 50px;
+        }
+
+        .page-title h2 {
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        .section-title {
+            padding: 0.5rem 0;
+            margin: 1rem 0;
+        }
+
+        .information h2 {
+            color: #bd290b;
+        }
+
+        .information table {
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .information table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .information th {
+            background-color: #f4f4f4;
+        }
+
+        .information a {
+            color: #0b57d0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .information a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 1010px) {
+
+            .container1 {
+                width: 78%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .main-container .container2 {
+                width: 20%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .container2 h1 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .container2 ul a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .container2 i {
+                margin-right: 7px;
+                font-size: 10px;
+            }
+
+            /* .container1 .content {
+                flex-wrap: wrap;
+            } */
+
+            .container1 .sidebar {
+                width: 20%;
+            }
+
+            .container1 .sidebar ul a {
+                line-height: 0px;
+                font-size: 8px;
+                color: black;
+                padding-left: 5px;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            .container1 .information {
+                width: 80%;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 8px;
+            }
+
+            .container1 .sidebar {
+                width: 25%;
+            }
+
+            .container1 .information {
+                width: 75%;
+                font-size: 12px;
+            }
+
+            .container2 ul a {
+                font-size: 9px;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .information table,
+            th,
+            td {
+                padding: 0.2rem;
+            }
+
+            .main-container {
+                gap: 2px;
+            }
+
+            .container1 .sidebar ul a {
+                font-weight: 500;
+            }
+
+            .container1 .information {
+                font-size: 11px;
+            }
+
+            .container2 ul a {
+                font-size: 8px;
+                font-weight: 500;
+            }
+
+            .container2 h1 {
+                padding: 7px;
+                font-size: 12px;
+            }
+
+            .content-section {
+                padding: 0 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 530px) {
+            .container1 {
+                width: 65%;
+            }
+
+            .main-container .container2 {
+                width: 30%;
+                padding: 5px;
+            }
+
+            .container1 .sidebar {
+                width: 45%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .container1 .sidebar ul a {
+                padding-left: 0px;
+            }
+
+            .container1 .information {
+                width: 100%;
+                padding: 0px;
+                font-size: 9px;
+            }
+
+            .section-title {
+                padding-bottom: 0.3rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .page-title {
+                padding: 20px;
+            }
+
+            .page-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container1 .sidebar {
+                width: 55%;
+            }
+
+            .main-container .container2 {
+                width: 32%;
+            }
+
+            .page-title h2 {
+                font-size: 20px;
+            }
+
+            .container2 h1 {
+                padding: 3px;
+                font-size: 10px;
+            }
+            .information table,
+            th,
+            td {
+                font-size: 6px;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .container1 .sidebar {
+                width: 75%;
+            }
+
+            .page-title {
+                padding: 20px 5px;
+            }
+
+            .page-title h2 {
+                font-size: 15px;
+            }
+            .information table,
+            th,
+            td {
+                padding: 0.1rem;
+            }
+            .information table,
+            th,
+            td {
+                font-size: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-title">
+        <h2>Department of Chemistry</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="container1">
+            <div class="content">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#" data-content="content1">Overview</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content2">Goals of the Department</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content3">Faculty</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content4">Syllabus</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content5">Activities</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content6">PO's PSO's CO's NEP CBCS</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content7">PO's PSO's CBCS</a></li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="information">
+                    <div id="content1" class="content-section">
+                        <section>
+                            <h2 class="section-title">Overview</h2>
+                            <p>The Department of Chemistry was established in June 2020. Chemistry is offered as both a
+                                compulsory and an optional subject for the B.Sc. degree. The department is enriched with
+                                various teaching and learning equipment, as well as practical instruments. The
+                                admissions and results of the department improve every year.</p>
+                            <p>The department organizes various co-curricular and extra-curricular activities such as
+                                study tours, field visits, industrial visits, and project work regularly to encourage
+                                innovative and analytical approaches among the students. Guest lectures by eminent
+                                personalities are organized on various topics. The faculty provides special guidance for
+                                various types of competitive exams.</p>
+                            <p>The Department of Chemistry runs one certificate course: “Certificate Course in Household
+                                Chemicals” for the students of any faculty. The department has entered MoUs with other
+                                colleges for student enrichment. The department has a well-equipped laboratory with
+                                various teaching and learning resources, a smart board, and computers to provide an
+                                effective learning environment to students. The department also encourages and
+                                facilitates scholars to pursue their careers in higher studies and maintain academic
+                                integrity in the field of Chemistry.</p>
+                        </section>
+                    </div>
+                    <div id="content2" class="content-section">
+                        <section>
+                            <h2 class="section-title">Goals of the Department</h2>
+                            <ul>
+                                <li>To develop the department as a center of excellence in all aspects of education.
+                                </li>
+                                <li>To promote and inspire the fundamentals of Chemistry through our UG Course.</li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div id="content3" class="content-section">
+                        <section>
+                            <h2 class="section-title">Faculty</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Name of Faculty</th>
+                                        <th>Designation</th>
+                                        <th>Qualification</th>
+                                        <th>Experience</th>
+                                        <th>Detail Bio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Miss. Priyanka Vidyadhar Patil</td>
+                                        <td>Assistant Professor and Head</td>
+                                        <td>M.Sc. Inorganic Chemistry</td>
+                                        <td>5 Years</td>
+                                        <td><a href="/website/img/faculty/Priyanka%20Patil%20Personal%20Profile.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Miss. Sayali Dileep Kulkarni</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.Sc. Organic Chemistry, B.Ed.</td>
+                                        <td>4 Years</td>
+                                        <td><a href="/website/img/faculty/Sayali%20Kulkarni.pdf">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Miss. Snehal Sambhaji Patil</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.Sc. Physical Chemistry, B.Ed.</td>
+                                        <td>2 Years</td>
+                                        <td><a href="/website/img/faculty/Snehal%20patil.pdf">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Mr. Sandip Maruti Valase</td>
+                                        <td>Lab Assistant</td>
+                                        <td>B.Sc. Chemistry</td>
+                                        <td>14 Years</td>
+                                        <td><a href="/website/img/faculty/Sandip%20Valase%20Resume.pdf">Click here</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content4" class="content-section">
+                        <section>
+                            <h2 class="section-title">Syllabus</h2>
+                            <ul>
+                                <li><a
+                                        href="/website/img/pdf/B.%20Sc.%20Part%20-I%20Chemistry%20Minor%20Change%20NEP%202023-24_syllabus.pdf">B.
+                                        Sc. I Chemistry: (Sem I and Sem II) – June 2023-24 Onwards</a></li>
+                                <li><a href="/website/img/pdf/B.Sc%20Part%20II%20Chemistry%20(NEP2020)_syllabus.pdf">B.
+                                        Sc. II Chemistry: (Sem III and Sem IV) – June 2023-24 Onwards</a></li>
+                                <li><a href="/website/img/pdf/B.Sc.%20Part%20%20III%20Chemistry%20CBCS%20Syllabus.pdf">B.
+                                        Sc. III Chemistry: (Sem V and Sem VI) – June 2020-21 Onwards</a></li>
+                                <li><a href="/website/img/pdf/Activity%20Report_chemistry/Household%20Chemicals.pdf">Certificate
+                                        Course in Household Chemicals – 2023-24 Onwards</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content5" class="content-section">
+                        <section>
+                            <h2 class="section-title">Activities</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Activity</th>
+                                        <th>Date</th>
+                                        <th>Detail Report</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Guest Lecture on Opportunities after B.Sc.</td>
+                                        <td>1/10/2022</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Opportunities%20after%20B.sc.pdf">Click
+                                                here</a></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Industrial Visit to Rajarambapu Sugar Factory Rajaramnagar, Urun-Islampur
+                                        </td>
+                                        <td>19/1/2023</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Industrial%20Visit%202022-23.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Guest Lecture on Opportunities after B.Sc. (MOU Activity)</td>
+                                        <td>10/03/2023</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Opportunities%20after%20B.sc%20MOU.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>One Day Teacher on the occasion of Teachers Day</td>
+                                        <td>4/09/2023</td>
+                                        <td><a href="/website/img/pdf/Activity%20Report_chemistry/Teachers%20day.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Industrial Visit to Rajarambapu Sugar Factory Rajaramnagar, Urun-Islampur
+                                        </td>
+                                        <td>14/12/2023</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Industrial%20Visit%202023-24.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>One Day workshop on Scientific Temper and Rational Thinking</td>
+                                        <td>19/12/2023</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Scientific%20temper%20and%20rational%20thinking.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>One Day workshop on Consumer Protection</td>
+                                        <td>16/01/2024</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/Consumer%20protection.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Visit to Kokan</td>
+                                        <td>18/01/2024<br>19/01/2024</td>
+                                        <td><a href="/website/img/pdf/Activity%20Report_chemistry/Kokan%20Visit.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Guest lecture on the occasion of National Science Day</td>
+                                        <td rowspan="4">28/02/2024</td>
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/National%20Science%20day%20Guest%20lecture.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Quiz competition on the occasion of National Science Day</td>
+
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/National%20Science%20day%20Quiz.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Poster Competition, Poster and Model Competition on the occasion of National
+                                            Science Day</td>
+
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/National%20Science%20day%20Poster%20presentation%20(1).pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Science wallpaper opening on the occasion of National Science Day</td>
+
+                                        <td><a
+                                                href="/website/img/pdf/Activity%20Report_chemistry/National%20Science%20day%20Wallpaper%20opening.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content6" class="content-section">
+                        <section>
+                            <h2 class="section-title">PO's PSO's CO's NEP CBCS</h2>
+                            <ul>
+                                <li><a href="/website/img/pdf/PO's%20PSO's%20CO's%20NEP%20CBCS_chemistry.pdf">Click
+                                        here</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content7" class="content-section">
+                        <section>
+                            <h2 class="section-title">PO's, CO's, PSO's CBCS</h2>
+                            <p>PSO-1. Gain the knowledge of Chemistry through theory and practical experiments.</p>
+
+                            <p>PSO-2. To explain nomenclature, stereo chemistry, structures, reactivity, and mechanism
+                                of the chemical reactions.</p>
+
+                            <p>PSO-3. Identify chemical formulae and solve numerical problems.</p>
+
+                            <p>PSO-4. To understand the basic principles of Organic, Inorganic, Physical and Analytical
+                                Chemistry and its applications through Various laboratory experiments.</p>
+                            <p>PSO-5. Use modern chemical tools, Models, Chem-draw, Charts and Equipment.</p>
+                            <p>PSO-6. Understand good laboratory practices and safety.</p>
+                            <p>PSO-7. Develop research-oriented skills.</p>
+                            <p>PSO-8. Aware and handle the sophisticated instruments/ equipment’s.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2" style="margin-bottom: -15px;">
+            <h1>Departments</h1>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i></i>Marathi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Hindi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>English</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>History</a></li>
+                <li><a href="<?php echo base_url('geography') ?>"><i class="fa-solid fa-book"></i>Geography</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Economics</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Commerce</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.B.A & B.C.A</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.C.S</a></li>
+                <li><a href="<?php echo base_url('chemistry') ?>"><i class="fa-solid fa-book"></i>Chemistry</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Computer Science</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.sidebar ul a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(this.dataset.content).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

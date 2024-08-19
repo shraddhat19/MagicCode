@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.B.A</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background: rgba(243, 241, 241, 0.927);
+            gap: 10px;
+        }
+
+        .container1 {
+            width: 80%;
+            background: white;
+            padding: 30px 30px 50px 30px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #f22e07;
+            align-items: flex-start;
+        }
+
+        .container1 hr {
+            background: #f78771;
+            border: none;
+            height: 1px;
+        }
+
+        .container1 .content {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .container1 .sidebar {
+            width: 25%;
+        }
+
+        .container1 .information {
+            width: 80%;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: #516171;
+        }
+
+        .container1 .sidebar ul a {
+            line-height: 35px;
+            font-size: 13px;
+            color: black;
+            padding-left: 15px;
+            box-sizing: border-box;
+            font-weight: 700;
+        }
+
+        .sidebar hr {
+            background: none;
+            height: 1px;
+            border-bottom: 1.5px dashed #bd290b;
+        }
+
+        .content-section {
+            display: none;
+            padding: 0 20px;
+        }
+
+        .content-section:first-child {
+            display: block;
+        }
+
+        .main-container .container2 {
+            width: 15%;
+            margin-top: 10px;
+            position: sticky;
+            padding-bottom: 20px;
+        }
+
+        .container2 h1 {
+            padding: 7px 18px;
+            background: rgb(171, 70, 70);
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .container2 ul {
+            background: white;
+        }
+
+        .container2 ul li {
+            padding: 5px;
+            border-radius: 10px;
+            border-bottom: rgb(244, 243, 243) 0.5px solid;
+        }
+
+        .container2 ul a {
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .container2 i {
+            margin-right: 15px;
+            color: #fc5a39;
+            font-size: 15px;
+        }
+
+        .page-title {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            background: #3a3a3dc2 url(/website/img/bg_sub-header.webp) repeat 0 0;
+            padding: 50px;
+        }
+
+        .page-title h2 {
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        .section-title {
+            padding: 0.5rem 0;
+            margin: 1rem 0;
+        }
+
+        .information h2 {
+            color: #bd290b;
+        }
+
+        .information table {
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .information table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .information th {
+            background-color: #f4f4f4;
+        }
+
+        .information a {
+            color: #0b57d0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .information a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 1010px) {
+
+            .container1 {
+                width: 78%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .main-container .container2 {
+                width: 20%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .container2 h1 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .container2 ul a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .container2 i {
+                margin-right: 7px;
+                font-size: 10px;
+            }
+
+            .container1 .content {
+                flex-wrap: wrap;
+            }
+
+            .container1 .sidebar {
+                width: 20%;
+            }
+
+            .container1 .sidebar ul a {
+                line-height: 0px;
+                font-size: 8px;
+                color: black;
+                padding-left: 5px;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            .container1 .information {
+                width: 80%;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 8px;
+            }
+
+            .container1 .sidebar {
+                width: 25%;
+            }
+
+            .container1 .information {
+                width: 75%;
+                font-size: 12px;
+            }
+
+            .container2 ul a {
+                font-size: 9px;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .information table,
+            th,
+            td {
+                padding: 0.2rem;
+            }
+
+            .main-container {
+                gap: 2px;
+            }
+
+            .container1 .sidebar ul a {
+                font-weight: 500;
+            }
+
+            .container1 .information {
+                font-size: 11px;
+            }
+
+            .container2 ul a {
+                font-size: 8px;
+                font-weight: 500;
+            }
+
+            .container2 h1 {
+                padding: 7px;
+                font-size: 12px;
+            }
+
+            .content-section {
+                padding: 0 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 530px) {
+            .container1 {
+                width: 65%;
+            }
+
+            .main-container .container2 {
+                width: 30%;
+                padding: 5px;
+            }
+
+            .container1 .sidebar {
+                width: 45%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .container1 .sidebar ul a {
+                padding-left: 0px;
+            }
+
+            .container1 .information {
+                width: 100%;
+                padding: 0px;
+                font-size: 9px;
+            }
+            .container2 ul a {
+                font-size: 10px;
+                font-weight: 500;
+            }
+            .section-title {
+                padding-bottom: 0.3rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .page-title {
+                padding: 20px;
+            }
+
+            .page-title h2 {
+                font-size: 30px;
+            }
+            .container2 i {
+                margin-right: 3px;
+                font-size: 7px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container1 .sidebar {
+                width: 55%;
+            }
+
+            .main-container .container2 {
+                width: 32%;
+            }
+
+            .page-title h2 {
+                font-size: 20px;
+            }
+
+            .container2 h1 {
+                padding: 3px;
+                font-size: 10px;
+            }
+
+            .information table,
+            th,
+            td {
+                font-size: 6px;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .container1 .sidebar {
+                width: 75%;
+            }
+
+            .page-title {
+                padding: 20px 5px;
+            }
+
+            .page-title h2 {
+                font-size: 15px;
+            }
+
+            .information table,
+            th,
+            td {
+                padding: 0.1rem;
+            }
+
+            .information table,
+            th,
+            td {
+                font-size: 4px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="page-title">
+        <h2>Department of B.B.A</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="container1">
+            <div class="content">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#" data-content="content1">Overview</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content2">Students Centered Activities</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content3">Students Enrichment Programs</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content4">Goals of the Department</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content5">Faculty</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content6">Syllabus</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content7">Activities</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content8">POs, PSOs, and COs</a></li>
+                        <hr>
+                    </ul>
+                </div>
+                <div class="information">
+                    <div id="content1" class="content-section">
+                        <section>
+                            <h2 class="section-title">Overview</h2>
+                            <p>The college started BBA degree full-time course in the year 2007 and BCA degree full-time course in 2008. Both courses are affiliated with Shivaji University Kolhapur. The syllabus of BBA and BCA courses prescribed by Shivaji University has been completed in time during the academic years 2022-23 & 2023-24.</p>
+                            <p>Our College has provided sufficient classrooms, reading rooms, girls' rooms, boys' rooms, digital classrooms, language labs, etc. to the BBA students. College has provided a sophisticated computer lab to students with broadband internet connection. Students have free access to internet facilities. All books concerned with subjects including reference books have been provided to students in the college central library. OHP and LCD Projector have been also provided to students.</p>
+                        </section>
+                    </div>
+                    <div id="content2" class="content-section">
+                        <section>
+                            <h2 class="section-title">Students Centered Activities</h2>
+                            <ul>
+                                <li><strong>Welcome Function of BBA & BCA – 1st Year students:</strong> This activity was to make the introduction of new students with old students and to make new students aware of the college and their future challenges.</li>
+                                <li><strong>Valedictory Function:</strong> This function was conducted to give best wishes to BBA – III and BCA-III year students for their bright future. Third-year students shared their views and experiences about the college with students.</li>
+                                <li><strong>Traditional Day:</strong> We celebrated Traditional Day. Students participated by wearing traditional uniforms and performed traditional activities. Students organized and participated in Funny Games, Music Chair, and Various Cultural activities conducted on Traditional Day.</li>
+                                <li><strong>Cultural, Curricular, and Co-Curricular Activities:</strong> BBA & BCA students participated in different cultural, curricular, and co-curricular activities organized by the college such as the college magazine ‘Yashodhan’, Gymkhana Day, Teacher Day, etc.</li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div id="content3" class="content-section">
+                        <section>
+                            <h2 class="section-title">Students Enrichment Programs</h2>
+                            <ul>
+                                <li><strong>Project Work:</strong> As per the Shivaji University curriculum, all BBA & BCA – III year students completed project work in IT, financial, marketing, HR, and production fields in organizations under the valuable guidance of faculty members.</li>
+                                <li><strong>Students’ Seminars:</strong> All BBA students gave seminars on topics given to them by the faculty members of each subject.</li>
+                                <li><strong>Industrial Visit:</strong> An industrial visit was organized to Kirloskar Brothers Ltd. Kirloskarwadi, an MNC company. Our BBA-II and III-year students participated in this visit. They learned about the manufacturing of pumps, the use of pumps for different purposes worldwide, factory layout, required skills, technology, management, etc. Mr. Sangram Ghorapade (HR Manager) guided our students.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content4" class="content-section">
+                        <section>
+                            <h2 class="section-title">Goals of the Department</h2>
+                            <ul>
+                                <li>To provide the facility for acquiring technical & managerial knowledge to the students of our college.</li>
+                                <li>To ingrain basic technological & managerial concepts among students.</li>
+                                <li>To elevate managerial discipline.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content5" class="content-section">
+                        <section>
+                            <h2 class="section-title">Faculty</h2>
+                            <table class="faculty-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Name of Faculty</th>
+                                        <th>Designation</th>
+                                        <th>Qualification</th>
+                                        <th>Experience</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mr. Sudhir Vishwanath Patil</td>
+                                        <td>Assistant Professor and Head</td>
+                                        <td>M.C.A.</td>
+                                        <td>14 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Mrs. Bhagyshri Mukesh Pawar</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.C.A.</td>
+                                        <td>15 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Ms. Rutuja Rajendra Patil</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.C.A.</td>
+                                        <td>2 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Mr. Atul Akaram Patil</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.B.A.</td>
+                                        <td>14 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mr. Santosh S. Patil</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.B.A.</td>
+                                        <td>9 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Mrs. Smita Digvijay Dubal</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.B.A.</td>
+                                        <td>7 Years</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Mr. Prashant Jayant Inamdar</td>
+                                        <td>Assistant Professor</td>
+                                        <td>M.B.A., M.Com, M.Phil</td>
+                                        <td>7 Years</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content6" class="content-section">
+                        <section>
+                            <h2 class="section-title">Syllabus</h2>
+                            <ul>
+                                <li><a href="#">B.B.A. I : (Sem I and Sem II) – June 2022-23 Onwards</a></li>
+                                <li><a href="#">B.B.A. II : (Sem III and Sem IV) – June 2023-24 Onwards</a></li>
+                                <li><a href="#">B.B.A. III : (Sem V and Sem VI) – June 2021-22 Onwards</a></li>
+                                <li><a href="#">B.C.A. I : (Sem I and Sem II) – June 2022-23 Onwards</a></li>
+                                <li><a href="#">B.C.A. II : (Sem III and Sem IV) – June 2023-24 Onwards</a></li>
+                                <li><a href="#">B.C.A. III : (Sem V and Sem VI) – June 2022-23 Onwards</a></li>
+                                <li><a href="#">Certificate Course in Spoken English – 2021-22 Onwards</a></li>
+                                <li><a href="#">Certificate Course in Data Entry Operator – 2021-22 Onwards</a></li>
+                                <li><a href="#">Certificate Course in Accounts Executive – 2021-22 Onwards</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content7" class="content-section">
+                        <section>
+                            <h2 class="section-title">Activities</h2>
+                            <table class="activities-table">
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Activity</th>
+                                        <th>Date</th>
+                                        <th>Detail Report</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Seminar on Start-up Business</td>
+                                        <td>22/09/2022</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Seminar on ERP & Its Implications</td>
+                                        <td>18/12/2022</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Seminar on Open Source & Job Market</td>
+                                        <td>21/12/2022</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Guest Lecture on Advance Career in Networking Field</td>
+                                        <td>16/01/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Guest Lecture on CDAC & CDAC Courses</td>
+                                        <td>18/01/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Guest Lecture on Frontend & Backend Technology for Software Development</td>
+                                        <td>28/01/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Guest Lecture on ‘About Further Education’</td>
+                                        <td>10/02/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Guest Lecture on Cyber-Crimes</td>
+                                        <td>10/02/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Guest Lecture on MBA CET Orientation</td>
+                                        <td>01/03/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Guest Lecture on Digital Marketing</td>
+                                        <td>01/03/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Workshop on MBA CET Preparation</td>
+                                        <td>02/03/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Workshop on Android Programming</td>
+                                        <td>05/04/2023 & 06/04/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Orientation Programme on Skill Development & Campus Placement</td>
+                                        <td>15/04/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>Guest Lecture on Finance, Banking & Insurance</td>
+                                        <td>12/08/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>Guest Lecture on Opportunities in IT Sector</td>
+                                        <td>27/08/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>Guest Lecture on Preparation of Entrance Exam</td>
+                                        <td>08/09/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>Seminar on ERP and Its Implications</td>
+                                        <td>18/12/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>Seminar on Open Source & The Job Market</td>
+                                        <td>22/12/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>Guest Lecture on Cloud Computing Virtualization</td>
+                                        <td>01/03/2024</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content8" class="content-section">
+                        <section>
+                            <h2 class="section-title">POs, PSOs, and COs</h2>
+                            <p>(Kindly Provide doc files [MS-Word])</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2" style="margin-bottom: -15px;">
+            <h1>Departments</h1>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i></i>Marathi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Hindi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>English</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>History</a></li>
+                <li><a href="<?php echo base_url('geography') ?>"><i class="fa-solid fa-book"></i>Geography</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Economics</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Commerce</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.B.A</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.C.A</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.C.S</a></li>
+                <li><a href="<?php echo base_url('chemistry') ?>"><i class="fa-solid fa-book"></i>Chemistry</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Computer Science</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.sidebar ul a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(this.dataset.content).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>

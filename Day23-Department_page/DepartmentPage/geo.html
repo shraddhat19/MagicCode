@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background: rgba(243, 241, 241, 0.927);
+            gap: 10px;
+        }
+
+        .container1 {
+            width: 80%;
+            background: white;
+            padding: 30px 30px 50px 5px;
+        }
+
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            color: #f22e07;
+            align-items: flex-start;
+        }
+
+        .container1 hr {
+            background: #f78771;
+            border: none;
+            height: 1px;
+        }
+
+        .container1 .content {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .container1 .sidebar {
+            width: 25%;
+        }
+
+        .container1 .information {
+            width: 80%;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: #516171;
+        }
+
+        .container1 .sidebar ul a {
+            line-height: 35px;
+            font-size: 13px;
+            color: black;
+            padding-left: 15px;
+            box-sizing: border-box;
+            font-weight: 700;
+        }
+
+        .sidebar hr {
+            background: none;
+            height: 1px;
+            border-bottom: 1.5px dashed #bd290b;
+        }
+
+        .content-section {
+            display: none;
+            padding: 0 20px;
+        }
+
+        .content-section:first-child {
+            display: block;
+        }
+
+        .main-container .container2 {
+            width: 15%;
+            margin-top: 10px;
+            position: sticky;
+            padding-bottom: 20px;
+        }
+
+        .container2 h1 {
+            padding: 7px 18px;
+            background: rgb(171, 70, 70);
+            color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .container2 ul {
+            background: white;
+        }
+
+        .container2 ul li {
+            padding: 5px;
+            border-radius: 10px;
+            border-bottom: rgb(244, 243, 243) 0.5px solid;
+        }
+
+        .container2 ul a {
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .container2 i {
+            margin-right: 15px;
+            color: #fc5a39;
+            font-size: 15px;
+        }
+
+        .page-title {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            background: #3a3a3dc2 url(/website/img/bg_sub-header.webp) repeat 0 0;
+            padding: 50px;
+        }
+
+        .page-title h2 {
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        .section-title {
+            padding: 0.5rem 0;
+            margin: 1rem 0;
+        }
+
+        .information h2 {
+            color: #bd290b;
+        }
+
+        .information table {
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .information table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        .information th {
+            background-color: #f4f4f4;
+        }
+
+        .information a {
+            color: #0b57d0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .information a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 1010px) {
+
+            .container1 {
+                width: 78%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .main-container .container2 {
+                width: 20%;
+                margin-top: 0;
+                position: static;
+                padding: 10px;
+            }
+
+            .container2 h1 {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .container2 ul a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+
+            .container2 i {
+                margin-right: 7px;
+                font-size: 10px;
+            }
+
+            .container1 .content {
+                flex-wrap: wrap;
+            }
+
+            .container1 .sidebar {
+                width: 20%;
+            }
+
+            .container1 .sidebar ul a {
+                line-height: 0px;
+                font-size: 8px;
+                color: black;
+                padding-left: 5px;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+
+            .container1 .information {
+                width: 80%;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+
+            .information table,
+            th,
+            td {
+                font-size: 8px;
+            }
+
+            .container1 .sidebar {
+                width: 25%;
+            }
+
+            .container1 .information {
+                width: 75%;
+                font-size: 12px;
+            }
+
+            .container2 ul a {
+                font-size: 9px;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .information table,
+            th,
+            td {
+                padding: 0.2rem;
+            }
+
+            .main-container {
+                gap: 2px;
+            }
+
+            .container1 .sidebar ul a {
+                font-weight: 500;
+            }
+
+            .container1 .information {
+                font-size: 11px;
+            }
+
+            .container2 ul a {
+                font-size: 8px;
+                font-weight: 500;
+            }
+
+            .container2 h1 {
+                padding: 7px;
+                font-size: 12px;
+            }
+
+            .content-section {
+                padding: 0 10px;
+            }
+
+        }
+
+        @media screen and (max-width: 530px) {
+            .container1 {
+                width: 65%;
+            }
+
+            .main-container .container2 {
+                width: 30%;
+                padding: 5px;
+            }
+
+            .container1 .sidebar {
+                width: 45%;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            .container1 .sidebar ul a {
+                padding-left: 0px;
+            }
+
+            .container1 .information {
+                width: 100%;
+                padding: 0px;
+                font-size: 9px;
+            }
+
+            .section-title {
+                padding-bottom: 0.3rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .page-title {
+                padding: 20px;
+            }
+
+            .page-title h2 {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .container1 .sidebar {
+                width: 55%;
+            }
+
+            .main-container .container2 {
+                width: 32%;
+            }
+
+            .page-title h2 {
+                font-size: 20px;
+            }
+
+            .container2 h1 {
+                padding: 3px;
+                font-size: 10px;
+            }
+
+            .information table,
+            th,
+            td {
+                font-size: 6px;
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            .container1 .sidebar {
+                width: 75%;
+            }
+
+            .page-title {
+                padding: 20px 5px;
+            }
+
+            .page-title h2 {
+                font-size: 15px;
+            }
+
+            .information table,
+            th,
+            td {
+                padding: 0.1rem;
+            }
+
+            .information table,
+            th,
+            td {
+                font-size: 4px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="page-title">
+        <h2>Department of Geography</h2>
+    </div>
+
+    <div class="main-container">
+        <div class="container1">
+            <div class="content">
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#" data-content="content1">Overview</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content2">Goals of the Department</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content3">Faculty</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content4">Syllabus</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content5">Activities</a></li>
+                        <hr>
+                        <li><a href="#" data-content="content6">PO's PSO's CBCS</a></li>
+                        <hr>
+                        
+                    </ul>
+                </div>
+                <div class="information">
+                    <div id="content1" class="content-section">
+                        <section>
+                            <h2 class="section-title">Goals of the Department</h2>
+                            <p>The Department of Geography was established on June 1982. Presently, Geography is taught
+                                as an optional subject for the B. A. degree. The department is enriched with different
+                                types of teaching and learning equipment. The admissions and results of the department
+                                are better every year.</p>
+                            <p>The department organizes various co-curricular and extra-curricular activities such as
+                                study tours, fieldworks, industrial visits, project work regularly to encourage
+                                innovative and analytical approaches among the students. Guest lectures of eminent
+                                personalities are organized on various topics. The faculty provides special guidance for
+                                various types of competitive exams.</p>
+                            <p>The Department of Geography runs two certificate courses one is “Certificate Course in
+                                Land Surveying” and “Certificate Course in Travel & Tourism” for the students of any
+                                faculty. Apart from that, the department run a Geographical Forum, to use geographical
+                                knowledge for the conservation of local resources and sustainable development.</p>
+                            <p>The department has entered MoUs with other HEIs for student enrichment. Currently, the
+                                department is well equipped laboratory with different types of teaching and learning
+                                sources, smart board, survey instruments, maps and computers to provide an effective
+                                learning environment to students. The department also encourages and facilitates
+                                scholars to follow their career in higher studies and academic integrity in the field of
+                                geography.</p>
+                        </section>
+                    </div>
+                    <div id="content2" class="content-section">
+                        <section>
+                            <h2 class="section-title">Goals of the Department</h2>
+                            <ul>
+                                <li>To provide the facility for acquiring geographical knowledge to the Students of
+                                    our college.</li>
+                                <li>To ingrain basic geographical concepts among students.</li>
+                                <li>Try to elevate geographic discipline.</li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div id="content3" class="content-section">
+                        <section>
+                            <h2 class="section-title">Faculty</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Name of Faculty</th>
+                                        <th>Designation</th>
+                                        <th>Qualification</th>
+                                        <th>Experience</th>
+                                        <th>Detail Bio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dr. Sachin Pandurang Hudale</td>
+                                        <td>Assistant Professor and Head</td>
+                                        <td>M. A., M. Phil., Ph. D., NET</td>
+                                        <td>20 Years</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Dr. Hemant Rajraram Sawant</td>
+                                        <td>Assistant Professor (CHB)</td>
+                                        <td>M. A., B. Ed., Ph. D.</td>
+                                        <td>24 Years</td>
+                                        <td><a href="/website/img/faculty/Dr.%20H.%20R.%20Sawant.pdf">Click here</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Mrs. Heenakausar Gavandi</td>
+                                        <td>Assistant Professor (CHB)</td>
+                                        <td>M. A., B. Ed., SET</td>
+                                        <td>2 Years</td>
+                                        <td><a href="/website/img/faculty/Heenakausar%20Salim.pdf">Click here</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Mr. Baburao Mandake</td>
+                                        <td>Assistant Professor (CHB)</td>
+                                        <td>M. A., SET</td>
+                                        <td>2 Years</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Mr. Abhay Bhauso Patil</td>
+                                        <td>Assistant Professor (EVS)</td>
+                                        <td>M. A., B. Ed.</td>
+                                        <td>8 Years</td>
+                                        <td><a href="/website/img/faculty/Abhay%20Patil%20Personal%20Profile.pdf">Click
+                                                here</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content4" class="content-section">
+                        <section>
+                            <h2 class="section-title">Syllabus</h2>
+                            <ul>
+                                <li><a href="#">B. A. I Geography : (Sem I and Sem II) – June 2022-23 Onwards</a>
+                                </li>
+                                <li><a href="#">B. A. II Geography : (Sem III and Sem IV) – June 2023-24 Onwards</a>
+                                </li>
+                                <li><a href="#">B. A. III Geography : (Sem V and Sem VI) – June 2024-25 Onwards</a>
+                                </li>
+                                <li><a href="#">Certificate Course in Land Surveying – 2022-23 Onwards</a></li>
+                                <li><a href="#">Certificate Course in Travel and Tourism – 2023-24 Onwards</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div id="content5" class="content-section">
+                        <section>
+                            <h2 class="section-title">Activities</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sr. No.</th>
+                                        <th>Activity</th>
+                                        <th>Date</th>
+                                        <th>Detail Report</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Guest lecture on the occasion of Geography Day</td>
+                                        <td>14/01/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>One Day Workshop on ‘Georeferencing, Digitization and Map layout
+                                            Preparation’</td>
+                                        <td>03/03/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>One Day workshop on the ‘How to prepare M. A. Entrance Examination’</td>
+                                        <td>24/04/2023</td>
+                                        <td><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Guest lecture on ‘Role of Ozone in Climate Change’ on the occasion of
+                                            Ozone Day</td>
+                                        <td rowspan="2">15/09/2023</td>
+                                        <td rowspan="2"><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Wallpaper Presentation on the occasion of Ozone Day</td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Guest lecture on the occasion of Geography Day</td>
+                                        <td rowspan="2">18/01/2024</td>
+                                        <td rowspan="2"><a href="#">Click here</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Exhibition on ‘Geographical Concepts and Ideas’ on the occasion of
+                                            Geography Day</td>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                    <div id="content6" class="content-section">
+                        <section>
+                            <h2 class="section-title">POs, PSOs and COs</h2>
+                            <p>1. Students understand the physical setup of the world.</p>
+                            <p>2. It helps students to study relationship between human activities and physical
+                                resources.</p>
+                            <p>3. Students can relate the global level situation to the local level.</p>
+                            <p>4. Students understand the natural and manmade disasters and their management</p>
+                            <p>5. Student can acquire scientific temperament and respect diversity in the world.</p>
+                            <p>6. Students also acquire different cartographic and geoinformatic techniques and methods
+                                used for representation of demographic and physio-socio-economic database.</p>
+                        </section>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container2" style="margin-bottom: -15px;">
+            <h1>Departments</h1>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i></i>Marathi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Hindi</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>English</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>History</a></li>
+                <li><a href="<?php echo base_url('geography') ?>"><i class="fa-solid fa-book"></i>Geography</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Economics</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Commerce</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.B.A & </a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>B.C.S</a></li>
+                <li><a href="<?php echo base_url('chemistry') ?>"><i class="fa-solid fa-book"></i>Chemistry</a></li>
+                <li><a href="#"><i class="fa-solid fa-book"></i>Computer Science</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.sidebar ul a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                document.getElementById(this.dataset.content).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+
+</html>
