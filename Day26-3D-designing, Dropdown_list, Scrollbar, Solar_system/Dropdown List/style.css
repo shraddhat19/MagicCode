@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:  "Sofia", sans-serif;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+    background: rgb(87, 87, 194);
+}
+ul li{
+    display: inline-block;
+    padding: 20px;
+}
+ul li:hover{
+    background: rgb(65, 65, 147);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: blanchedalmond;
+}
+a:active {
+    color: rgb(255, 0, 217);
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    display: none;
+    background: rgb(87, 87, 194);
+    position: absolute;
+}
+ul li:hover ul.dropdown{
+    display: block;
+    margin-top: 20px;
+}
+.dropdown li ul.sub-dropdown{
+    display: none;
+    position: absolute;
+}
+.dropdown li:hover ul.sub-dropdown{
+    display: block;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+i{
+    margin-left: 5px;
+}
