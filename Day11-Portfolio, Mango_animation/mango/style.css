@@ -1,0 +1,113 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+  grid-template-rows: 33.3% 33.3% 33.3% ;
+  background-color: #2195f37d;
+  padding: 10px;
+  border:black 2px solid;
+}
+img{
+    height:30vh;
+}
+
+.mango1{
+    animation: up-down 1.5s ease-in infinite;
+}
+@keyframes up-down{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(-20%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(20%);
+    }   
+}
+
+.mango2{
+    animation: rotate 2s ease-in infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+.mango3{
+    animation: matric 1s ease-in infinite;
+}
+@keyframes matric{
+    0%{
+        transform: matrix(0.586,0.8,-0.8,0.586,40,30);
+    }
+}
+
+.mango4{
+    animation: scale 3s ease-in infinite;
+}
+@keyframes scale{
+    0%{
+    transform: scaleY(-60%);
+    }
+}
+
+.mango5{
+    animation:  zoom-in-zoom-out 3s ease-in infinite;
+}
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(0.1, 0.1);
+    }
+      100%{
+        transform: scale(1,1);
+    }
+}
+
+.mango6{
+    animation: deg 2s ease-in infinite;
+}
+@keyframes deg{
+    0%{
+        transform: translate(-20%,-70%);
+    }
+}
+
+.mango7{
+    animation: back-forth 2s ease-in infinite;
+}
+@keyframes back-forth{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(-20%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(20%);
+    } 
+
+}
+
+.mango8{
+    animation: skew 5s ease-in infinite;
+}
+@keyframes skew{
+    0%{
+        transform: skewY(50deg);
+    }
+    50%{
+        transform: skewY(-20deg);
+    }
+    100%{
+        transform: skewX(20deg);
+    }
+}
+
+
