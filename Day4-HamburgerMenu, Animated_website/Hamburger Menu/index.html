@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Delalty</h1>
+        </div>
+        <div class="openmenu">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="Mainmenu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">MENU</a></li>
+            <div class="closemenu">
+                <i class="fa fa-times"></i>
+            </div>
+            <span class="icons">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-github"></i>
+            </span>
+        </ul>
+    </nav>
+    <script>
+const Mainmenu=document.querySelector('.Mainmenu');
+const closemenu=document.querySelector('.closemenu');
+const openmenu=document.querySelector('.openmenu');
+
+openmenu.addEventListener('click',show);
+closemenu.addEventListener('click',close);
+
+function show(){
+    Mainmenu.style.display= 'flex';
+    Mainmenu.style.top='0';
+}
+function close(){
+    Mainmenu.style.top='-100%';
+}
+
+    </script>
+</body>
+</html>

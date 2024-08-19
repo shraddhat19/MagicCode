@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hero{
+    width:100%;
+    min-height:100vh;
+    background-image: url(img/backs.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding:10px 10%;
+    overflow:hidden;
+    position: relative;
+}
+nav{
+    padding:5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width:50px;
+}
+nav ul li{
+    display: inline-block;
+    list-style:none;
+    margin:10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color:rgb(96, 2, 96);
+    font-weight: 400;
+    font-size: 15px;
+} 
+.login-btn{
+    text-decoration: none;
+    margin-right: 15px;
+    color:rgb(96, 2, 96);
+    font-size: 15px;
+}
+.btn{
+    color:#fff; 
+    background-image: linear-gradient(45deg,#df4881,#c430d7); 
+    font-size:11px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    padding:7px 22px;
+    transition: 0.4s;
+
+}
+.main-content{
+    display:flex;
+    flex-wrap: wrap;
+}
+.content{
+   margin-top:10%;
+   width:50%;
+}
+.content h1{
+    font-size: 50px;
+    color:#222;
+}
+.content p{
+    margin:20px 0 30px 0;
+    color:#333;
+    font-size: 14px;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    animation-delay: 1s;
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.santa-img{
+    width:30%;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    height:60%;
+}
+.santa-img.anim{
+    animation-delay: 1.5s;
+}
+.anim{
+    opacity:0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity:1;
+    transform: translateY(0px);
+    }
+}
+.slider{
+    overflow:hidden;
+}
+
+.slider ul li{
+    list-style:none;
+    animation: ticker 10s infinite;
+   
+}
+.merry{
+    display: flex;
+    text-decoration: none;
+    margin-top: 130px;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
+    border-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.merry a{
+    text-decoration: none;
+    padding:10px;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    margin:0 20px;
+ 
+}
+@keyframes ticker{
+    from{
+        transform:translateX(100%);
+    }
+    t0{
+        transform: translateX(-300);
+    }
+}
+@media screen and (max-width: 780px) {
+    .content{
+        width: 100%;
+    }
+    .santa-img {
+        width: 100%;
+        position: relative;
+    }
+}

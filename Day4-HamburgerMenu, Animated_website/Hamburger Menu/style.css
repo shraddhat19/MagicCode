@@ -1,0 +1,94 @@
+*{
+    box-sizing:box-border;
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background: #000;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+}
+nav .Mainmenu{
+    display:flex;
+    list-style: none;
+}
+nav .Mainmenu li a{
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    color:#fff;
+}
+nav .Mainmenu li a:hover{
+    background:rgba(255, 94, 0, 0.674);
+}
+nav .openmenu{
+    font-size: 3 rem;
+    margin:20px;
+    display: none;
+    cursor: pointer;
+ }
+nav .Mainmenu .closemenu , .icons i{
+    font-size: 2 rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-facebook:hover{
+    color:rgba(0,110,255);
+}
+.fa-twitter:hover{
+    color:rgba(86,154,243);
+}
+.fa-instagram:hover{
+    color:rgba(255,0,199);
+}
+.fa-github:hover{
+    color:rgba(255,123,0);
+}
+nav .logo{
+    margin:6px;
+    font-size: 20px;
+    cursor:pointer;
+}
+@media(max-width:800px){
+    nav .Mainmenu{
+        height:100vh;
+        position: fixed;
+        top:0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:#000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .Mainmenu .closemenu{
+        display: block;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+    }
+    nav .openmenu{
+        display:block;
+    }
+    nav .Menu li a:hover{
+        background: none;
+        color:rgba(255,123,0);
+        font-size: 19px;
+
+    }
+    .icons i{
+        display: inline-block;
+        padding:12px;
+    }
+
+
+}
