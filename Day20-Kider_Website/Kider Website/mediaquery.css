@@ -1,0 +1,66 @@
+@media screen and (max-width:1000px) {
+    .wrapnav {
+        display: none;
+    }
+
+    .openmenu {
+        display: block;
+    }
+
+    .Back-img h1 {
+        font-size: 50px;
+    }
+
+    .learn,
+    .classes {
+        padding: 10px 15px;
+        margin: 10px 0;
+        font-weight: 550;
+        font-size: 19px;
+    }
+
+    .button {
+        gap: 20px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    .Back-img h1 {
+        font-size: 25px;
+    }
+
+    .Back-img p {
+        font-size: 16px;
+    }
+
+    .Back-img {
+        height: 70vh;
+    }
+    .overlay{
+        height: 70vh;
+    }
+
+    .learn,
+    .classes {
+        font-size: 15px;
+        padding: 8px 12px;
+    }
+
+    .button {
+        gap: 10px;
+    }
+    .openmenu{
+        margin:0 15px;
+    }
+    .work-culture{
+        flex-wrap: wrap;
+    }
+}

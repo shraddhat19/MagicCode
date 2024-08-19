@@ -1,0 +1,638 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.navbar {
+    width: 100%;
+    padding: 2px;
+    top: 0;
+    left: 0;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    flex-basis: 30%;
+}
+
+.logo img {
+    width: 50%;
+    height: 100%;
+}
+
+.logo h1 {
+    color: rgb(254, 116, 4);
+}
+
+.wrapnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 70%;
+}
+
+.openmenu {
+    display: none;
+    margin: 0 40px;
+    cursor: pointer;
+    right: 0;
+}
+
+.openmenu i {
+    border: 1px solid rgba(128, 128, 128, 0.562);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.main-list li {
+    list-style: none;
+    display: inline;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+li a {
+    color: black;
+    font-size: 18px;
+}
+
+.sub-list {
+    position: absolute;
+    display: none;
+    background: rgb(81, 6, 19);
+}
+
+.sub-list a {
+    color: white;
+}
+
+.sub-list a:hover {
+    color: black;
+}
+
+.list:hover .sub-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-us {
+    margin: 10px 30px;
+    background: rgb(254, 116, 4);
+    padding: 8px 12px;
+    border-radius: 30px;
+}
+
+.join-us a {
+    color: white;
+    font-size: 19px;
+}
+
+.Back-img {
+    width: 100%;
+    height: 90vh;
+    background-image: url(image/kid1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Back-img h1,
+.Back-img p {
+    color: white;
+    margin: 20px 0;
+    z-index: 999;
+}
+
+.Back-img h1 {
+    font-size: 70px;
+    font-family: cursive;
+}
+
+.Back-img p {
+    font-size: 22px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.297);
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.wrapcontent {
+    position: absolute;
+    padding: 10px;
+}
+
+.wrapcontent h1 {
+    animation: down 2s ease;
+}
+
+@keyframes down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.wrapcontent p {
+    animation: slide 2s ease;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translatex(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(x0px);
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.learn,
+.classes {
+    padding: 15px 25px;
+    margin: 20px 0;
+    background: rgba(255, 255, 0, 0.324);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    border: 3px solid white;
+    z-index: 1111;
+}
+
+.learn:hover,
+.classes:hover {
+    background: rgba(255, 255, 255, 0.29);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 0, 0.82);
+}
+
+.classes a,
+.learn a {
+    color: white;
+}
+
+.classes a:hover,
+.learn a:hover {
+    color: rgba(255, 255, 0, 0.979);
+}
+
+.work-culture {
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+}
+
+.work-culture .col1 {
+    margin-left: 20px;
+    padding: 20px;
+    width: 50%;
+}
+
+.col1 h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.para {
+    font-size: 18px;
+    color: rgba(110, 108, 108, 0.982);
+    padding: 5px;
+    width: 90%;
+}
+
+.row2 {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+
+.wrap p {
+    line-height: 0.8cm;
+    font-size: 22px;
+}
+
+.john {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+.john img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: black 2px solid;
+}
+
+.john img:hover {
+    border: black 3px solid;
+}
+
+.col1 .name {
+    color: black;
+    padding: 5px;
+}
+
+.row2 button {
+    margin: 10px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    background: white;
+    color: rgb(254, 116, 4);
+    border: 2px solid rgb(254, 116, 4);
+}
+
+.row2 button:hover {
+    background: rgb(254, 116, 4);
+    color: white;
+    font-size: 18px;
+    padding: 18px 30px;
+}
+
+.col2 {
+    width: 50%;
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    color: rgb(254, 116, 4);
+    font-weight: 800;
+}
+
+.ceo {
+    font-size: 18px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ceo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1;
+    height: 3px;
+    width: 143px;
+    border-radius: 12px;
+    background: rgba(254, 117, 4, 0.733);
+}
+
+.pic1,
+.pic2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.pic1 {
+    right: 80px;
+    bottom: -27em;
+}
+
+.pic2 {
+    right: 390px;
+    bottom: -27em;
+}
+
+.col2 .pic3 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.col2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px pink solid;
+}
+
+.col2 img:hover {
+    border: 15px orange solid;
+}
+
+.teacher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.teacher-content {
+    display: flex;
+    margin: 20px 50px;
+    background: rgba(236, 134, 149, 0.128);
+    border-radius: 10px;
+}
+
+.teacher-content .image {
+    width: 50%;
+}
+
+.teacher-content .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.teacher-content .text-box {
+    padding: 30px;
+    width: 50%;
+}
+
+.teacher-content .text-box h2 {
+    font-size: 35px;
+    margin: 40px 0;
+    font-family: cursive;
+}
+
+.text-box p {
+    margin-bottom: 40px;
+    line-height: 0.6cm;
+    color: rgb(86, 84, 84);
+}
+
+.text-box button {
+    padding: 15px 10px;
+    border: none;
+    width: 90%;
+    border-radius: 10px;
+    background: rgba(141, 9, 141, 0.854);
+    color: white;
+    font-size: 16px;
+}
+
+.popular-teachers {
+    margin: 20px auto;
+}
+
+.popular-teacher-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    text-align: center;
+}
+
+.popular-teacher-text h1 {
+    font-size: 40px;
+    margin: 30px;
+}
+
+.popular-teacher-text p {
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.popular-teacher-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 150px;
+}
+
+.popular-teacher-image img {
+    border-radius: 50%;
+    max-width: 250px;
+    height: 400px;
+    border: 1px rgba(0, 0, 0, 0.374) solid;
+    box-shadow: 0 0 3px;
+}
+
+.popularteacher1,
+.popularteacher2,
+.popularteacher3 {
+    position: relative;
+}
+
+.popular-teacher-image .textbox {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    bottom: 0;
+    right: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 17px solid rgba(82, 82, 135, 0.792);
+    border-radius: 250px;
+    transition: .5s;
+}
+
+.popular-teacher-image .textbox:hover {
+    border: 17px solid rgb(82, 82, 135);
+}
+
+.popular-teacher-image h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.popular-teacher-image h3 {
+    color: grey;
+    font-weight: 200;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.popular-teacher-image i {
+    background: navy;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.appointment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+
+}
+
+.appointment-content {
+    display: flex;
+    margin: 20px 50px;
+    background: rgba(236, 134, 149, 0.128);
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.appointment-content .text-box {
+    padding: 30px;
+    width: 50%;
+}
+
+.appointment-content .image {
+    width: 50%;
+}
+
+.appointment-content .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+}
+
+.appointment-content .text-box h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    font-family: cursive;
+}
+
+.guardian,
+.child {
+    margin: 10px 20px;
+    width: 190px;
+}
+
+.email,
+.age {
+    width: 188px;
+}
+
+.submit {
+    width: 85%;
+    margin: 20px;
+    background: orangered;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.submit:hover {
+    background: white;
+    color: orangered;
+    border: orangered 2px solid;
+}
+
+.message {
+    width: 80%;
+    margin: 10px 20px;
+}
+footer{
+    background: #103741;
+    padding:30px;
+    margin-top: 50px;
+}
+footer .col{
+    width: 25%;
+    line-height: 0.9cm;
+}
+footer .col i{
+    margin-right: 10px;
+}
+footer .container{
+    padding: 20px;
+    color:rgba(216, 215, 215, 0.973);
+    display: flex;
+}
+footer h3{
+    color: white;
+    font-family: cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+footer .icons{
+    display: flex;
+    margin-top: 10px;
+}
+footer .icons i{
+    border-radius: 50%;
+    border:rgba(216, 215, 215, 0.973) 0.8px solid;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+footer .icons i:hover{
+    background: rgb(255, 85, 0);
+}
+footer .quick-links{
+    display: flex;
+    flex-direction: column;
+}
+footer .image{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+footer .img{
+    width: 100px;
+    height: 75px;
+}
+footer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: white 2px solid;
+}
+footer input{
+    margin-top: 20px;
+    border-radius: 10px;
+    background: transparent;
+    border:rgba(216, 215, 215, 0.973) 0.8px solid;
+    padding: 15px;
+    font-size: 17px;
+}
