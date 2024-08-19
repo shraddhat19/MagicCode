@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(img/img1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+.col{
+    display: flex;
+    flex-wrap: wrap;
+}
+.colx{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18%;
+    gap: 10px;
+}
+.col1{
+    background: rgba(255, 255, 255, 0.733);
+    border-right: rgba(255, 217, 0, 0.772) solid 20px;
+    padding: 20px;
+    text-align: center;
+}
+.heading h1{
+    padding: 30px;
+    color:rgb(212, 59, 59);
+}
+.rank h2{
+    color: white;
+    background: rgb(212, 59, 59);
+    border-radius: 5px;
+    padding: 5px;
+}
+.india h3{
+    color:navy;
+    font-size: 25px;
+    margin-top: 20px;
+    letter-spacing: 0.03cm;
+}
+.nirf h1{
+    color:rgb(118, 31, 198);
+    font-size: 140px;
+    margin-top: 40px;
+}
+.last h3{
+    color:blue;
+    font-size: 30px;
+    letter-spacing: 0.08cm;
+    word-spacing: 0.2cm;
+}
+.card1,.card2,.card3{
+    /* top:40%; */
+    background:linear-gradient(brown,rgb(228, 56, 26));
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 1000;
+    outline:dashed 1.5px goldenrod;
+    outline-offset: 5px;
+    outline-style: none dashed none none; 
+    height:25vh; 
+} 
+.opacity{
+    opacity:70%;
+    font-weight: 100;
+}
+.size{
+    font-size: 30px;
+}
+ h1{
+    font-size:60px;
+    color:white;
+}
+ h3{
+    color:#fff;
+}
+ h2{
+    color: gold;
+}
+.btn{
+    writing-mode: vertical-rl;
+    right:0;
+}
+.col .btn button{
+    background: rgb(212, 59, 59);
+    padding:10px 5px;
+    border:double white 4px;
+    right:0;
+}
+.btn a{
+    text-decoration: none;
+    font-size: 20px;
+    color:white;
+}
+.btn button:hover{
+    background: white;
+    border:solid rgb(212, 59, 59) 3px;
+    border-radius: 20px;
+}
+.btn a:hover{
+    color:rgb(212, 59, 59);
+}
