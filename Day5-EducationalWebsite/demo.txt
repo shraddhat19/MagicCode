@@ -1,0 +1,28 @@
+<!-- <ul class="submenu">
+        <li><a href="#">STUDENTS</a></li>
+        <li><a href="#">ACADEMICS</a></li>
+        li><a href="#">EXAMINATION</a></li>
+    </ul> -->
+
+/* nav .Menu li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: white;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+nav .Menu li .submenu li {
+    display: block;
+}
+
+nav .Menu li:hover .submenu {
+    display: block;
+} 
+.Menu li:hover .submenu{
+    display:block;
+} */
