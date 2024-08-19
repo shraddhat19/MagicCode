@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Image1 {
+    width: 100%;
+    height: 80vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/img1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+.name {
+    line-height: 1.5cm;
+    color: white;
+    text-align: center;
+    background: transparent;
+    border: rgba(228, 227, 227, 0.781) solid 1px;
+    padding: 20px;
+    z-index: 1000;
+    letter-spacing: 0.02cm;
+}
+
+.name h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.name h2 {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: absolute;
+    font-size: 20px;
+    word-spacing: 0.7cm;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background: rgba(211, 211, 211, 0.984);
+}
+
+.btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    background: rgba(105, 104, 104, 0.151);
+}
+
+.border1 {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.border2 {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.portfolio {
+    /* margin-left: 150px;
+    margin-right: 150px; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 30px;
+}
+
+.photo {
+    width: calc(100%-24px);
+    height: 65vh;
+    padding: 12px 24px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-container {
+    padding: 12px 24px;
+    font-family: Verdana, sans-serif;
+}
+
+.contact {
+    width: calc(100%-24px);
+    padding: 24px;
+    background-color: #f1f1f1;
+    font-family: Verdana, sans-serif;
+}
+
+.contact h2 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.contact p {
+    font-weight: 10;
+    font-size: 12px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+    height: 0;
+}
+
+.form {
+    font-size: 16px;
+}
+
+.input {
+    border: 1px solid #ccc !important;
+    width: 98%;
+    padding: 8px;
+}
+
+.row {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.submitbtn {
+    color: #fff !important;
+    background-color: #616161;
+    width: 100%;
+    border: none;
+    padding: 6px 0;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .Image1 {
+        height: 60vh;
+    }
+    .name {
+        line-height: 1cm;
+        padding: 15px;
+    }
+    .name h1 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .name h2 {
+        display: none;
+    }
+    .portfolio {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+        margin-top: 30px;
+    }
+    .photo {
+        height: 50vh;
+    }
+    .contact {
+        font-size: 10px;
+    }
+    .form,
+    .submitbtn {
+        font-size: 14px;
+    }
+    hr {
+        margin: 10px 0;
+    }
+}
