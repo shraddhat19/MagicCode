@@ -1,0 +1,169 @@
+@media screen and (max-width:1024px) {
+    .header {
+        margin: 30px;
+        font-size: 20px;
+        text-shadow: 2px 2px 3px rgba(227, 42, 42, 0.918);
+    }
+
+    .header .image {
+        width: 150px;
+    }
+
+    .container1 {
+        height: 70vh;
+    }
+
+    .container1 .heading {
+        font-size: 40px;
+        text-shadow: 3px 3px black;
+    }
+    .container2 .list li{
+        display: none;
+    }
+    .container3 button{
+        font-size: 12px;
+        padding: 8px 10px;
+        width: 80%;
+    }
+    .container4 h3{
+        font-size: 20px;
+    }
+    .container4 h1{
+        font-size: 80px;
+    }
+    .container4 h2{
+        font-size: 40px;
+    }
+    .footer{
+        padding:20px 40px;
+    }
+    .footer .row1{
+        margin: 20px;
+    }
+    .row1 i{
+        font-size: 20px;
+    }
+    .footer .row2{
+        gap: 15px;
+    }
+    .row2 h2{
+        font-size:20px ;
+    }
+    .row2 li{
+        font-size: 15px;
+    }
+    .copyright{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:768px) {
+    .header {
+        font-size: 15px;
+        text-shadow: 1px 1px 2px rgba(227, 42, 42, 0.918);
+    }
+
+    .header .image {
+        width: 50px;
+    }
+
+    .container1 {
+        height: 50vh;
+    }
+
+    .container1 .heading {
+        font-size: 30px;
+        text-shadow: 2px 2px black;
+    }
+    .container3{
+        height: 50vh;
+    }
+    .container3 button{
+        font-size: 12px;
+        width: 80%;
+    }
+    .container4{
+        height: 80vh;
+    }
+    .container4 h3{
+        font-size: 20px;
+    }
+    .container4 h1{
+        font-size: 60px;
+    }
+    .container4 h2{
+        font-size: 30px;
+    }
+    .footer{
+        padding:20px 30px;
+    }
+    .footer .row2{
+        gap: 10px;
+    }
+    .row2 h2{
+        font-size:16px ;
+    }
+    .row2 li{
+        font-size: 13px;
+        line-height: 0.4cm;
+    }
+    .copyright{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:480px) {
+    .header {
+        font-size: 10px;
+        text-shadow: 0.5px 0.5px 4px rgba(227, 42, 42, 0.918);
+    }
+
+    .header .image {
+        width: 30px;
+    }
+
+    .container1 {
+        height: 30vh;
+    }
+
+    .container1 .heading {
+        font-size: 17px;
+    }
+    .container3{
+        height: 30vh;
+    }
+    .container3 button{
+        font-size: 10px;
+        padding: 6px ;
+    }
+    .container4{
+        height: 50vh;
+    }
+    .container4 h3{
+        font-size: 15px;
+    }
+    .container4 h1{
+        font-size: 40px;
+    }
+    .container4 h2{
+        font-size: 25px;
+    }
+    .footer{
+        padding:20px 30px;
+    }
+    .row1 i{
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    .footer .row2{
+        gap: 8px;
+    }
+    .row2 h2{
+        font-size:16px ;
+    }
+    .row2 li{
+        font-size: 12px;
+        line-height: 0.4cm;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+}
