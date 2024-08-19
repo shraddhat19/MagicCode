@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.form-container{
+    height:auto;
+    background: linear-gradient(to bottom right, rgba(250, 114, 2, 0.815),rgba(253, 253, 3, 0.747));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background: rgba(255, 255, 255, 1);
+    border-radius: 7px;
+    padding: 20px;
+    z-index: 99;
+    margin: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px 0 rgba(130, 59, 1, 0.653),0 4px 10px 0 rgba(156, 156, 2, 0.671);
+}
+.row1 h2{
+    margin-bottom: 40px;
+    color: rgb(57, 3, 108);
+    /* text-align:center ; */
+    font-size: 25px;
+    position: relative;
+}
+.row1 h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #f23f03;
+  }
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.col1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:10px;
+}
+.col2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap:10px;
+}
+.label{
+    font-size: 16px;
+    font-weight: 540;
+}
+.input{
+    padding: 4px 6px;
+}
+.radio{
+    margin-left: 40px;
+}
+.btn{
+    width: 100%;
+    background: linear-gradient(to right, rgba(252, 252, 3, 0.973),rgba(253, 115, 3, 0.963));
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 550;
+    box-shadow:2px 2px 3px grey,2px 2px 3px grey ;
+}
+.size{
+    font-size: 14.5px;
+}
+.checkbox{
+    margin: 25px 0;
+    font-size: 13px;
+}
+h3{
+    margin-top:20px;
+    margin-bottom: 5px;
+    font-weight: 550;
+    font-size: 16px;
+}

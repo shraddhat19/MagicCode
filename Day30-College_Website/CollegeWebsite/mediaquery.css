@@ -1,0 +1,347 @@
+@media screen and (min-width: 1024px) and (max-width:1200px) {
+    .header-container {
+        border-top-left-radius: 80px;
+    }
+
+    .head-text {
+        margin-left: 0px;
+    }
+
+    .header-title {
+        padding-left: 10px;
+    }
+
+    .head-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .head-text .naac {
+        font-size: 0.75rem;
+    }
+
+    .head-text .moto {
+        font-size: 0.7rem;
+    }
+
+    .header-menu .list1 li {
+        padding: 0px 8px;
+        font-size: 0.8rem;
+    }
+
+    .header-menu .list2 li a {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-container {
+        justify-content: center;
+        border-top-right-radius: 100px;
+        border-top-left-radius: 100px;
+    }
+
+    .header-title {
+        padding-left: 70px;
+    }
+
+    .header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-menu {
+        display: none;
+    }
+
+    .open-menu {
+        display: block;
+        margin-left: auto;
+        padding: 10px;
+        color: white;
+    }
+
+    .admission-open .admission {
+        width: 400px;
+    }
+
+    .admission-open p {
+        font-size: 1rem;
+    }
+
+    .admission-open .register {
+        padding: 5px 20px;
+    }
+
+    .admission-open .register a {
+        font-size: 0.85rem;
+    }
+
+    .event_content-container {
+        width: 150px;
+        flex-wrap: nowrap;
+    }
+
+    .footer {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .head-image {
+        width: 70px;
+        height: 70px;
+    }
+    .header-title {
+        padding-left: 40px;
+    }
+
+    .head-text h3 {
+        font-size: 1rem;
+    }
+    .head-text .naac {
+        font-size: 0.65rem;
+    }
+    
+    .head-text .moto {
+        font-size: 0.6rem;
+    }
+    .announcement h3 {
+        font-size: 0.6rem;
+        padding-right: 20px;
+    }
+
+    .announcement marquee {
+        font-size: 0.55rem;
+    }
+
+    .slider {
+        height: 50vh;
+    }
+
+    .admission-open .admission {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .admission-open p {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .admission-open .register {
+        padding: 1px 10px;
+    }
+
+    .admission-open .register a {
+        font-size: 0.65rem;
+    }
+
+    .admission-open .new {
+        font-size: 0.6rem;
+    }
+
+    .principal-desk {
+        padding: 30px 8px;
+    }
+
+    .principal-image {
+        max-width: 160px;
+        height: 55vh;
+        margin-right: 10px;
+    }
+
+    .principal-description {
+        max-width: 570px;
+        font-size: 0.6rem;
+    }
+
+    .news-event {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .event_content-container {
+        width: 100px;
+        flex-wrap: nowrap;
+        padding: 8px;
+        height: 20vh;
+    }
+
+    .event_content-container h3 {
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    .news_title,
+    .event_title {
+        padding: 6px;
+        font-size: 0.75rem;
+    }
+
+    .news_content-container p {
+        line-height: 0.4cm;
+        margin-bottom: 15px;
+    }
+
+    .news_content-container {
+        font-size: 0.7rem;
+    }
+
+    .footer {
+        padding: 10px 30px;
+        font-size: 0.6rem;
+    }
+
+    .row1 {
+        flex-wrap: wrap;
+    }
+
+    .footer h3 {
+        font-size: 0.85rem;
+    }
+
+    .footer ul li {
+        line-height: 0.5cm;
+    }
+
+    .footer .row2 {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .head-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .head-text h3 {
+        font-size: 0.85rem;
+    }
+    .head-text .naac {
+        font-size: 0.45rem;
+    }
+    
+    .head-text .moto {
+        font-size: 0.4rem;
+    }
+    .announcement h3 {
+        font-size: 0.5rem;
+        padding: 6px;
+        padding-right: 12px;
+    }
+
+    .announcement marquee {
+        font-size: 0.45rem;
+    }
+
+    .slider {
+        height: 40vh;
+    }
+
+    .admission-open {
+        height: 30vh;
+    }
+
+    .admission-open .admission {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .admission-open p {
+        font-size: 0.6rem;
+        margin-bottom: 10px;
+    }
+
+    .admission-open .register {
+        padding: 1px 5px;
+    }
+
+    .admission-open .register a {
+        font-size: 0.6rem;
+    }
+
+    .admission-open .new {
+        font-size: 0.55rem;
+    }
+
+    .principal-desk {
+        padding: 20px 8px;
+    }
+
+    .principal-image {
+        max-width: 100px;
+        height: 40vh;
+        margin-right: 8px;
+    }
+
+    .principal-description {
+        max-width: 360px;
+        font-size: 0.5rem;
+    }
+
+    .news-event {
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .event_content {
+        justify-content: center
+    }
+
+    .event_content-container {
+        width: 130px;
+    }
+
+    .event_content-container h3 {
+        font-size: 0.7rem;
+    }
+
+    .news {
+        width: 300px;
+    }
+
+    .news_title,
+    .event_title {
+        font-size: 0.6rem;
+        text-align: center;
+    }
+    .news_content-container p {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        padding: 10px 20px;
+        font-size: 0.5rem;
+    }
+
+    .footer h3 {
+        font-size: 0.7rem;
+    }
+
+    .footer ul li {
+        line-height: 0.3cm;
+    }
+    .location{
+        width:200px;
+        height: 100px;
+    }
+
+    .footer .row2 {
+        font-size: 0.55rem;
+    }
+}
+@media screen and (max-width:340px){
+    .header-title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+     .location{
+        width:150px;
+        height: 80px;
+    }
+}
