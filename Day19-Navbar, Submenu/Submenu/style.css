@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background: rgba(160, 45, 45, 0.945);
+    display: flex;
+    justify-content: center;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px 5px;
+    justify-content: space-around;
+    width: 60%;
+}
+.list li {
+    list-style: none;
+}
+.list a {
+    color: white;
+    text-decoration: none;
+}
+.sub-ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(160, 45, 45, 0.945);
+    z-index: 1;
+    padding: 5;
+}
+.sub-ul a {
+    color: white;
+    text-decoration: none;
+}
+.sub-ul a:hover {
+    background-color: #eee;
+    color: black;
+}
+.list-item:hover .sub-ul {
+    display: block;
+}
