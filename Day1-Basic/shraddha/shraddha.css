@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:rgba(250, 248, 249, 0.854);
+    padding:10px;
+}
+h1{
+    padding:30px 40px;
+    border:2px solid rgb(92, 93, 63);
+    color:rgb(20, 20, 156)
+}
+h2{
+    padding-left:30px;
+    padding-top:20px;
+    color:rgb(20, 20, 156)
+}
+h3{
+    padding-left:30px;
+    color:rgb(90, 18, 173);
+}
+h4,h5,h6{
+    padding-left:30px;
+    color:rgba(83, 123, 243, 0.998);
+}
+p{
+    padding:10px;
+    color:rgba(224, 11, 110, 0.895);
+}

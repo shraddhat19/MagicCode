@@ -1,0 +1,44 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: rgba(255, 192, 203, 0.119);
+}
+.fum h1{
+    padding-left:210px;
+    padding-bottom:10px;
+    padding-top:20px;
+    border-bottom:2px dotted black;
+    color:rgb(109, 13, 198);
+    font-size: 25px;
+    font-family:Verdana;
+}
+h2{
+    padding-top:30px;
+    padding-left:160px;
+    padding-bottom:20px;
+    color:green;
+    
+}
+h3{
+    font-family:sans-serif;
+    padding:10px;
+   
+    color:rgb(219, 17, 17);  
+ 
+}
+
+p{
+    padding-left:10px;
+    border:2px black double;
+}
+/* .run{
+    padding:20px; */
+/* } */
+.run h1{
+    color:peru;
+    font-size:30px;
+    padding: 40px 70px;
+
+}
