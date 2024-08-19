@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width:100%;
+    margin:20px;
+}
+.wrapper{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height:100vh;
+}
+.img-info{
+    width:47%;
+}
+.img-info h2,p{
+    text-align: center;
+    padding:10px;
+}
+.img-info p{
+    color:rgb(53, 52, 52);
+    line-height: 0.6cm;
+}
+.wrapper img{
+    width:40%;
+    height:50%;
+}
